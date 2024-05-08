@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { FactsboxComponent } from '../factsbox/factsbox.component';
 
 @Component({
   selector: 'app-map',
   standalone: true,
-  imports: [],
+  imports: [FactsboxComponent],
   templateUrl: './map.component.html',
   styleUrl: './map.component.css'
 })
