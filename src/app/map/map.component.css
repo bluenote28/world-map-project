@@ -5,11 +5,11 @@
     }
   
 .flexbox {
-      width: 600px;
+      width: 700px;
       margin-right: 10px;
       border: 1px solid black;
       text-align: center;
       padding: 10px;
-      height: auto;
+      height: 700px;
     }
   
