@@ -5,11 +5,10 @@
     }
   
 .mapflexbox {
-      width: 800px;
-      margin-right: 10px;
+      width: 850px;
+      padding-right: 100px;
       text-align: left;
-      padding: 10px;
-      height: 700px;
+      height: 1200px;
     }
   
     .factsflexbox {
