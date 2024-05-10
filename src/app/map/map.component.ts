@@ -10,6 +10,12 @@ import { FactsboxComponent } from '../factsbox/factsbox.component';
 })
 export class MapComponent {
 
-  
+  countries = document.getElementsByTagName('path')
+
+  displayInformation(country: string){
+    console.log(country)
+
+  }
+
 
 }
