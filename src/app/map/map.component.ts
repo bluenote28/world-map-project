@@ -12,9 +12,33 @@ export class MapComponent {
 
   countries = document.getElementsByTagName('path')
 
-  displayInformation(country: string){
-    console.log(country)
+  
+  getCountryName(element: any){
+    
+    if (element.attributes.item(2).value == null){
+        return element.attributes.value
+    }
+    else{
+     return element.attributes.item(2).value
+    }
+  }
+  
+  loadEventHandlers(){
+    
+    for (let x = 0; x < this.countries.length; x++){
 
+      let element = this.countries[x]
+      let name = this.getCountryName(element)
+
+      element.addEventListener('mouseover', () => this.displayCountryName(name))
+      
+
+    }
+
+  }
+
+  displayCountryName(country: string){
+    console.log(country)
   }
 
 
