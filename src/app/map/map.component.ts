@@ -31,7 +31,7 @@ export class MapComponent {
       let element = this.countries[x]
       let name = this.getCountryName(element)
 
-      element.addEventListener('mouseover', () => this.displayCountryData(name))
+      element.addEventListener('click', () => this.displayCountryData(name))
 
     }
 
