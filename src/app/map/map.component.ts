@@ -11,6 +11,7 @@ import { FactsboxComponent } from '../factsbox/factsbox.component';
 export class MapComponent {
 
   countries = document.getElementsByTagName('path')
+  selectedCountry = ""
 
   
   getCountryName(element: any){
@@ -30,15 +31,15 @@ export class MapComponent {
       let element = this.countries[x]
       let name = this.getCountryName(element)
 
-      element.addEventListener('mouseover', () => this.displayCountryName(name))
-      
+      element.addEventListener('mouseover', () => this.displayCountryData(name))
 
     }
 
   }
 
-  displayCountryName(country: string){
-    console.log(country)
+  displayCountryData(country: string){
+    this.selectedCountry = country
+    console.log(this.selectedCountry)
   }
 
 
