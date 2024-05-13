@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges, input } from '@angular/core';
 
 @Component({
   selector: 'app-factsbox',
@@ -13,6 +13,9 @@ export class FactsboxComponent{
   @Input() countryRegion = '';
   @Input() countryCapital = ''
   @Input() incomeLevel = ''
+  @Input() countryLatitude = ''
+  @Input() countryLongitude = ''
+
 
   //ngOnChanges(changes: SimpleChanges) {
     //console.log(changes)

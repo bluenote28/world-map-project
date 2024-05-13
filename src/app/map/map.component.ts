@@ -17,6 +17,8 @@ export class MapComponent {
   income = ""
   capital = ""
   countryName = ""
+  latitude = ""
+  longitude = ""
 
 
   constructor(private apicall: ApiCallService) { }
@@ -25,7 +27,7 @@ export class MapComponent {
     this.selectedCountry = country.toUpperCase()
 
     const data = this.countryData[1]
-    console.log(this.countryData)
+    console.log(this.countryData[1])
 
     for (let x in data){
 
@@ -35,6 +37,8 @@ export class MapComponent {
         this.region = data[x]['region']['value']
         this.income = data[x]['incomeLevel']['value']
         this.countryName = data[x]['name']
+        this.latitude = data[x]['latitude']
+        this.longitude = data[x]['longitude']
         break
       }
     }   
