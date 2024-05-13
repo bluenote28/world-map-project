@@ -10,6 +10,9 @@ import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 export class FactsboxComponent{
 
   @Input() countryName = '';
+  @Input() countryRegion = '';
+  @Input() countryCapital = ''
+  @Input() incomeLevel = ''
 
   //ngOnChanges(changes: SimpleChanges) {
     //console.log(changes)

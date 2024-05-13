@@ -6,5 +6,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiCallService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+  public getCountryData(){
+    return this.http.get("https://api.worldbank.org/V2/country", {
+      params: {
+        format: 'json',
+        per_page: 300
+      }
+    })
+  }
 }
