@@ -16,23 +16,25 @@ export class MapComponent {
   region = ""
   income = ""
   capital = ""
+  countryName = ""
 
 
   constructor(private apicall: ApiCallService) { }
 
   displayCountryData(country: string){
-    this.selectedCountry = country
+    this.selectedCountry = country.toUpperCase()
 
     const data = this.countryData[1]
     console.log(this.countryData)
 
     for (let x in data){
 
-      if(data[x]['name'] == country){
+      if(data[x]['iso2Code'] == this.selectedCountry){
 
         this.capital = data[x]['capitalCity']
         this.region = data[x]['region']['value']
         this.income = data[x]['incomeLevel']['value']
+        this.countryName = data[x]['name']
         break
       }
     }   
