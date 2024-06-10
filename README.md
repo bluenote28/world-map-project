@@ -1,3 +1,6 @@
+
+This was a site done as a homework assignment for WGU
+
 # Worldmap
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.3.
